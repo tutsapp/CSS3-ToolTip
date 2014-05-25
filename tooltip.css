@@ -1,0 +1,95 @@
+/*
+File: Css3 ToolTip
+Date: 25/5/2014
+Production: RAPPS Prodcution
+Developer: Rahul Negi
+Use: tooltip using css3.Show content out of div.
+Product Name: Tooltip css3
+*/
+*
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+	margin:0;
+	padding:0;
+	background:#f9f9f9;
+	color:#333;
+	font-family:arial;
+	
+}
+a
+{
+	color:#3b5998;
+	text-decoration:none;
+}
+
+#header
+{
+display: block;
+text-align: center;
+padding: 10px 0;
+background: #7FF0CC;
+border-bottom: 2px solid #27BBB5;
+text-shadow: 2px 2px 0 #ECECEC;
+}
+
+#tooltip
+{
+position: absolute;
+width: 100px;
+height: 20px;
+line-height: 20px;
+padding: 10px;
+font-size: 14px;
+margin-left: 150px;
+margin-top: -167px;
+text-align: center;
+color: #fff;
+background: rgb(116, 170, 51);
+border: 4px solid rgb(116, 170, 51);
+visibility: hidden;
+border-radius: 5px;
+text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;
+z-index: 9999;
+}
+#tooltip:after
+{
+content: "";
+position: absolute;
+width: 0;
+height: 0;
+border-width: 10px;
+border-style: solid;
+border-color: #74aa33 transparent transparent transparent;
+top: 44px;
+left: 50px;
+}
+#block
+{
+display: block;
+margin: 8% 5%;
+width: 250px;
+border: 1px solid #F17E14;
+padding: 8px;
+float: left;
+height: 100px;
+cursor: help;
+background: #eee;
+border-radius: 10px;
+box-shadow: 0 0 19px #B45B09;
+font-size: 14px;
+font-family: cursive;
+}
+.block
+{
+height: 100px;
+}
+#block:hover #tooltip
+{
+visibility:visible;
+}
